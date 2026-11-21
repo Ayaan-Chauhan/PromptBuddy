@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+python-multipart
+gradio
+gTTS
+pydub
+scipy
+numpy
+pyttsx3
+sounddevice
+soundfile
+torch
+transformers
+sentencepiece
+openai-whisper
+git+https://github.com/VarunGumma/IndicTransToolkit.git

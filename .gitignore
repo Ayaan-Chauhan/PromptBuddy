@@ -1,0 +1,10 @@
+indictrans-env/
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+*.wav
+*.mp3
+.cache/
+flagged/
+.env
