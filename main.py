@@ -1,7 +1,6 @@
 from fastapi import FastAPI
-import sttmic  # mic + whisper
-import translate  # your IndicTrans pipeline (translate.py)
-
+import sttmic  
+import translate
 app = FastAPI()
 
 

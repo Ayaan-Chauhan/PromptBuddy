@@ -5,8 +5,8 @@ import tempfile
 import numpy as np
 import os
 
-SAMPLE_RATE = 16000  # Whisper expects 16kHz
-DURATION = 5         # seconds
+SAMPLE_RATE = 16000  
+DURATION = 5         
 
 # Load Whisper once (global)
 print("[INFO] Loading Whisper model...")

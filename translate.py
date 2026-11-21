@@ -2,9 +2,7 @@ import torch
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 from IndicTransToolkit import IndicProcessor
 
-# ---------------------------
 # Language Mapping
-# ---------------------------
 LANG_CODE_MAP = {
     "english": "eng_Latn",
     "hindi": "hin_Deva",
@@ -24,14 +22,10 @@ LANG_CODE_MAP = {
 SUPPORTED_LANGUAGE_CODES = list(LANG_CODE_MAP.values())
 INDIC_CODES = set([v for v in SUPPORTED_LANGUAGE_CODES if not v.startswith("eng")])
 
-# ---------------------------
 # Device Setup
-# ---------------------------
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# ---------------------------
 # Load Models Once
-# ---------------------------
 print("[INFO] Loading IndicTrans2 translation models...")
 
 en_indic_model_name = "ai4bharat/indictrans2-en-indic-1B"
@@ -45,9 +39,7 @@ indic_en_model = AutoModelForSeq2SeqLM.from_pretrained(indic_en_model_name, trus
 
 ip = IndicProcessor(inference=True)
 
-# ---------------------------
 # Translation Function (for FastAPI)
-# ---------------------------
 def run_translation(text: str, src_lang: str, tgt_lang: str) -> str:
     """Translate text between English and Indic languages using IndicTrans2."""
 

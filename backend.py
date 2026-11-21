@@ -2,7 +2,6 @@ from fastapi import FastAPI, UploadFile, Form
 from fastapi.responses import JSONResponse
 import os
 
-# Import from your local files
 from translate import run_translation, LANG_CODE_MAP
 from sttmic import transcribe_audio_whisper
 from tts import speak

@@ -5,14 +5,10 @@ from sttmic import transcribe_audio_whisper as transcribe
 import numpy as np
 import soundfile as sf
 
-# --------------------------
 # Supported Languages
-# --------------------------
 LANGUAGES = list(LANG_CODE_MAP.keys())
 
-# --------------------------
 # Normalize Audio (to fix silent recordings)
-# --------------------------
 def normalize_audio(audio_path):
     try:
         data, samplerate = sf.read(audio_path)
@@ -31,9 +27,7 @@ def normalize_audio(audio_path):
         print(f"[WARNING] Could not normalize audio: {e}")
     return audio_path
 
-# --------------------------
 # Main Handler
-# --------------------------
 def process_input(text, audio, src_lang, tgt_lang):
     print(f"[INFO] text='{text}'  audio={audio}  src={src_lang}  tgt={tgt_lang}")
 
@@ -76,9 +70,7 @@ def process_input(text, audio, src_lang, tgt_lang):
 
     return translated, translated
 
-# --------------------------
 # Gradio UI
-# --------------------------
 app = gr.Interface(
     fn=process_input,
     inputs=[
