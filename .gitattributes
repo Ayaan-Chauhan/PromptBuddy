@@ -3,3 +3,4 @@ promptbuddy_app/linux/** linguist-vendored
 promptbuddy_app/macos/** linguist-vendored
 promptbuddy_app/ios/** linguist-vendored
 promptbuddy_app/android/** linguist-vendored
+promptbuddy_app/web/** linguist-vendored
